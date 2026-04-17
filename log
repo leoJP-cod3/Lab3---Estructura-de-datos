@@ -2,3 +2,17 @@ Fri Apr 17 12:13:07 AM UTC 2026:
  tests:  0|7
 total_score: 0/60
 6560ebd
+Fri Apr 17 02:04:39 PM UTC 2026: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:48:37: error: too few arguments to function ‘calloc’
+   48 |     HashMap *nuevoMapa = (HashMap*) calloc(sizeof(HashMap));
+      |                                     ^~~~~~
+In file included from test.c:2:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/stdlib.h:675:14: note: declared here
+  675 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+50fd0f6
