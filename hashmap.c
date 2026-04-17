@@ -168,15 +168,12 @@ Pair * nextMap(HashMap * map) {
     long i = (map->current + 1) % map->capacity;
     long Inicio = i;
     
-    while (i != map->current){
+    for (long k = 0; k < map->capacity; k++){
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
             map->current = i;
             return map->buckets[i];
         }
         i = (i + 1) % map->capacity;
-
-        // Si volvemos al inicio sin encontrar nada, se sale del while y luego retorna NULL
-        if (i == Inicio) break;
     }
     return NULL;
 }
