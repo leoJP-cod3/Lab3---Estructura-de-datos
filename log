@@ -58,3 +58,33 @@ Fri Apr 17 02:16:12 PM UTC 2026:
  tests:  1|6
 total_score: 5/60
 264db37
+Fri Apr 17 02:29:06 PM UTC 2026: 
+ hashmap.c | 23 +++++++++++++++++++++++
+ 1 file changed, 23 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:77:25: error: array subscript is not an integer
+   77 |         if (map->buckets[index]->key == NULL) {
+      |                         ^
+hashmap.c:81:29: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+   81 |         index = (index + 1) % map->capacity;
+      |                 ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~
+      |                        |         |
+      |                        |         long int
+      |                        char * (*)(const char *, int)
+hashmap.c:84:22: error: ‘startIndex’ undeclared (first use in this function)
+   84 |         if (index == startIndex) {
+      |                      ^~~~~~~~~~
+hashmap.c:84:22: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:90:17: error: array subscript is not an integer
+   90 |     map->buckets[index] = createPair(key, value);
+      |                 ^
+hashmap.c:93:18: error: assignment to ‘long int’ from ‘char * (*)(const char *, int)’ makes integer from pointer without a cast [-Wint-conversion]
+   93 |     map->current = index;
+      |                  ^
+hashmap.c:71:10: error: unused variable ‘indiceInicial’ [-Werror=unused-variable]
+   71 |     long indiceInicial = indice;
+      |          ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+ca791d2
