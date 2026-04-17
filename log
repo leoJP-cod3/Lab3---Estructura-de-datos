@@ -52,3 +52,9 @@ hashmap.c:53:9: error: ‘buckets’ undeclared (first use in this function)
    53 |     map-buckets = (Pair **) malloc((sizeof(Pair)) * capacity);
       |         ^~~~~~~
 fa72c43
+Fri Apr 17 02:16:12 PM UTC 2026: 
+ hashmap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+ tests:  1|6
+total_score: 5/60
+264db37
