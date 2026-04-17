@@ -180,3 +180,14 @@ Fri Apr 17 03:39:33 PM UTC 2026:
  tests:  15|2
 total_score: 40/60
 600784e
+Fri Apr 17 03:46:17 PM UTC 2026: 
+ hashmap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:168:10: error: unused variable ‘i’ [-Werror=unused-variable]
+  168 |     long i = (map->current + 1);
+      |          ^
+cc1: all warnings being treated as errors
+17a8137
