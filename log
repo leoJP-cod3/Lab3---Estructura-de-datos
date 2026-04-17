@@ -100,3 +100,19 @@ Fri Apr 17 03:02:23 PM UTC 2026:
  tests:  8|3
 total_score: 30/60
 e11bc18
+Fri Apr 17 03:10:38 PM UTC 2026: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:132:26: error: assignment to ‘long int’ from ‘char * (*)(const char *, int)’ makes integer from pointer without a cast [-Wint-conversion]
+  132 |             map->current = index;
+      |                          ^
+hashmap.c:137:39: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  137 |         if (indice == Inicial) return NULL;
+      |                                       ^~~~
+hashmap.c:122:6: note: declared here
+  122 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+3a439be

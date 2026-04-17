@@ -120,8 +120,22 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
+    long indice = hash(key, map->capacity);
+    long Inicial = indice;
 
+    while(map->buckets[indice] != NULL){
+        Pair * pair = map->buckets[indice];
+        
+        if (pair-> key != NULL && strcmp(pair->key, key) == 0){
+            pair->key = NULL;
+            map->size--;
+            map->current = index;
+            return;
+        }
+        indice = (indice + 1) % map->capacity;
 
+        if (indice == Inicial) return NULL;
+    }
 }
 
 // 5. Implemente las funciones para recorrer la estructura: Pair * firstMap(HashMap * map) retorna el primer Pair válido del arreglo buckets. 
