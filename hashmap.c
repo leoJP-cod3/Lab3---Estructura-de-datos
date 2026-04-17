@@ -160,7 +160,24 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+    
+    // Ver si hay datos en el mapa
+    if (map == NULL || map->size == 0)
+        return NULL;
+    
+    long i = (map->current + 1) % map->capacity;
+    long Inicio = i;
+    
+    while (i != map->current){
+        if (map->current[i] != NULL && map->buckets[i]->key != NULL){
+            map->current = i;
+            return map->buckets[i];
+        }
+        i = (i + 1) % map->capacity;
 
+        // Si volvemos al inicio sin encontrar nada, se sale del while y luego retorna NULL
+        if (i == Inicio) break;
+    }
     return NULL;
 }
 

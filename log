@@ -141,3 +141,13 @@ Fri Apr 17 03:23:47 PM UTC 2026:
  tests:  11|2
 total_score: 40/60
 934bdc0
+Fri Apr 17 03:29:44 PM UTC 2026: 
+ hashmap.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:172:25: error: subscripted value is neither array nor pointer nor vector
+  172 |         if (map->current[i] != NULL && map->buckets[i]->key != NULL){
+      |                         ^
+2968494
