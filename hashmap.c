@@ -151,7 +151,7 @@ Pair * firstMap(HashMap * map) {
     // recorrer desde el inicio buscando el primero para luego retornarlo
     for (long i = 0; i < map->capacity; i++){
         if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
-            map->current = 1;
+            map->current = i;
             return map->buckets[i];
         }
     }
