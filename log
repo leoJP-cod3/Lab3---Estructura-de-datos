@@ -21,3 +21,20 @@ Fri Apr 17 02:05:02 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 74d835e
+Fri Apr 17 02:14:33 PM UTC 2026: 
+ hashmap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:5: error: ‘map’ undeclared (first use in this function)
+   49 |     map ->size = 0;
+      |     ^~~
+hashmap.c:49:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:53:9: error: ‘buckets’ undeclared (first use in this function)
+   53 |     map-buckets = (Pair **) malloc((sizeof(Pair)) * capacity);
+      |         ^~~~~~~
+hashmap.c:54:9: error: ‘i’ undeclared (first use in this function)
+   54 |     for(i = 0; i < capacity ;i++){
+      |         ^
+4be6b8b
