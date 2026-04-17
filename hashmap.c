@@ -134,7 +134,7 @@ void eraseMap(HashMap * map,  char * key) {
         }
         indice = (indice + 1) % map->capacity;
 
-        if (indice == Inicial)    return;
+        if (indice == Inicial) return;
     }
 }
 
@@ -144,6 +144,18 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
 
+    // Ver si hay datos en el mapa
+    if (map == NULL || map->size == 0)
+        return NULL;
+
+    // recorrer desde el inicio buscando el primero para luego retornarlo
+    for (long i = 0; i < map->capacity; i++){
+        if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
+            map->current = 1;
+            return map->buckets[i];
+        }
+    }
+    
     return NULL;
 }
 
