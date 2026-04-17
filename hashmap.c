@@ -134,9 +134,7 @@ void eraseMap(HashMap * map,  char * key) {
         }
         indice = (indice + 1) % map->capacity;
 
-        if (indice == Inicial) {
-            return NULL;
-        }
+        if (indice == Inicial)    return;
     }
 }
 
