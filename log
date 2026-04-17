@@ -151,3 +151,9 @@ hashmap.c:172:25: error: subscripted value is neither array nor pointer nor vect
   172 |         if (map->current[i] != NULL && map->buckets[i]->key != NULL){
       |                         ^
 2968494
+Fri Apr 17 03:30:08 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|2
+total_score: 40/60
+b0d3015

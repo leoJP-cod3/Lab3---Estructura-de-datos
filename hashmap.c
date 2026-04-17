@@ -169,7 +169,7 @@ Pair * nextMap(HashMap * map) {
     long Inicio = i;
     
     while (i != map->current){
-        if (map->current[i] != NULL && map->buckets[i]->key != NULL){
+        if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
             map->current = i;
             return map->buckets[i];
         }
