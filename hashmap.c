@@ -129,12 +129,14 @@ void eraseMap(HashMap * map,  char * key) {
         if (pair-> key != NULL && strcmp(pair->key, key) == 0){
             pair->key = NULL;
             map->size--;
-            map->current = index;
+            map->current = indice;
             return;
         }
         indice = (indice + 1) % map->capacity;
 
-        if (indice == Inicial) return NULL;
+        if (indice == Inicial) {
+            return NULL;
+        }
     }
 }
 
