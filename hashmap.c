@@ -188,17 +188,14 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1;
-    // a) guardar el arreglo antiguo
+    
     Pair ** old_buckets = map->buckets;
     long old_Cap = map->capacity;
     
-    // b) duplicar capacidad
     map->capacity *= 2;
     
-    // c) crear nuevo arreglo
     map->buckets = (Pair **) calloc(map->capacity, sizeof(Pair *));
     
-    // d) inicializar el size en 0
     map->size = 0;
 
     for(long i = 0; i < old_Cap; i++){
