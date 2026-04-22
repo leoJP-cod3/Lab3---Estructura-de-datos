@@ -106,7 +106,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long Inicial = indice;
     
     while(map->buckets[indice] != NULL){
-        if (strcmp(map->buckets[indice]->key, key) == 0){
+        if (map->buckets[indice]-> key != NULL && strcmp(map->buckets[indice]->key, key) == 0){
             map->current = indice;
             return map->buckets[indice];
         }
