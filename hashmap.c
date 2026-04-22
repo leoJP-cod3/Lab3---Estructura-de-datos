@@ -67,7 +67,7 @@ HashMap * createMap(long capacity) {
 // No inserte claves repetidas. Recuerde que el arreglo es circular. Recuerde actualizar la variable size.
 
 void insertMap(HashMap * map, char * key, void * value) {
-    if (map == NULL) return NULL;
+    if (map == NULL) return ;
     
     long indice = hash(key, map->capacity);
     long indiceInicial = indice;
@@ -124,7 +124,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
-    if (map == NULL) return NULL;
+    if (map == NULL) return ;
     
     long indice = hash(key, map->capacity);
     long Inicial = indice;
